@@ -13,15 +13,15 @@
 
 但目前发现xadmin2.0有个BUG暂时比较致命，在后台进行类orm操作去删除model数据时，必定报错，所以后来只能借助Navicat去删了。后面会持续优化这个网页，争取用其他框架再写一次
 
-##效果预览如下：
-##一、平台主页
+效果预览如下：
+一、平台主页
 ![image](https://github.com/ChrisLee0211/django-project/blob/master/index.png)
 
-##二、导航栏分页之一：
+二、导航栏分页之一：
 ![image](https://github.com/ChrisLee0211/django-project/blob/master/org.png)
 
-##三、后台登录页面：
+三、后台登录页面：
 ![image](https://github.com/ChrisLee0211/django-project/blob/master/xadmin-login.png)
 
-##四、后台管理页面：
+四、后台管理页面：
 ![image](https://github.com/ChrisLee0211/django-project/blob/master/xadmin2.png)
