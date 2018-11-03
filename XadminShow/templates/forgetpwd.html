@@ -25,6 +25,7 @@
     <div class="close jsCloseDialog"><img src="{% static 'images/dig_close.png' %}"/></div>
     <p class="green">请输入新密码</p>
     <form id="jsSetNewPwdForm">
+        {% csrf_token %}
         <div class="box">
             <span class="word2">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
             <input type="password" name="password" id="jsResetPwd" placeholder="请输入新密码"/>
@@ -52,7 +53,7 @@
             <p class="fl hd-tips">自学资源，在线学习平台！</p>
             <ul class="fr hd-bar">
                 <li>服务电话：<span>33333333</span></li>
-                <li><a href="{% static 'login' %}">[登录]</a></li>
+                <li><a href="{% url 'login' %}">[登录]</a></li>
                 <li class="active"><a href="{% url 'forget_pwd' %}">[忘记密码]</a></li>
             </ul>
         </div>

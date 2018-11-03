@@ -27,7 +27,7 @@ SECRET_KEY = 's)qhdyc=!2ap00#%%d#x8v=7%1qnu+44hry_ga)0g79wjvg7yo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ ]
+ALLOWED_HOSTS = []
 
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'pure_pagination',
-    'DjangoUeditor', 
+    'DjangoUeditor',
+    'introduct' ,
     
 ]
 
@@ -59,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -141,9 +142,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static'),
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
 
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_POST = 25
@@ -154,5 +153,5 @@ EMAIL_FROM = 'qq1018596741@163.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
+#STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR,'static')

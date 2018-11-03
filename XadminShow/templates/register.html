@@ -135,6 +135,7 @@
                 <!--</div>-->
                 <div class="tab-form">
                     <form id="email_register_form" method="post" action="{% url 'register' %}" autocomplete="off">
+                        {% csrf_token %}
                         <input type='hidden' name='csrfmiddlewaretoken' value='gTZljXgnpvxn0fKZ1XkWrM1PrCGSjiCZ' />
                         <div class="form-group marb20 {% if register_form.errors.email %} errorput {% endif %}">
                             <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>

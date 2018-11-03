@@ -18,15 +18,16 @@ from django.urls import path,include,re_path
 from django.views.generic import TemplateView
 from extra_apps import xadmin
 from django.views.static import serve
-from XadminShow.settings import MEDIA_ROOT
+from XadminShow.settings import MEDIA_ROOT#,STATIC_ROOT
 
 from users.views import LoginView,RegisterView,ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,LogoutView,IndexView
 from organization.views import OrgView
+from introduct.views import IntroductView
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
-
-    path('',IndexView.as_view(), name="index"),
+    path('',IntroductView.as_view(),name='introduct'),
+    path('index/',IndexView.as_view(), name="index"),
     path('login/',LoginView.as_view(), name="login"),
     path('logout/',LogoutView.as_view(), name="logout"),
     path('register/',RegisterView.as_view(), name="register"),
@@ -51,7 +52,7 @@ urlpatterns = [
     #配置访问文件的上传处理函数
     re_path(r'^media/(?P<path>.*)/$',serve,{'document_root':MEDIA_ROOT}),
 
-    #re_path(r'^static/(?P<path>.*)/$',serve,{'document_root':STATIC_ROOT})
+    #re_path(r'^static/(?P<path>.*)/$',serve,{'document_root':STATIC_ROOT}),
 ]
 
 #全局404、500页面
